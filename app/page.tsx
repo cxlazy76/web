@@ -1,17 +1,9 @@
-import LandingPage from "./components/LandingPage"
+import LandingPage from "./components/LandingPage";
 
 export default function Home() {
-  return <LandingPage />
+  return (
+    <main className="min-h-screen bg-white text-black">
+      <LandingPage />
+    </main>
+  );
 }
-
-// 'use client'
-
-// import CharacterGrid from './components/CharacterGrid'
-
-// export default function Page() {
-//   return (
-//     <main>
-//       <CharacterGrid />
-//     </main>
-//   )
-// }
