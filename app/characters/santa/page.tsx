@@ -114,7 +114,7 @@ export default function SantaPage() {
             {!videoUrl ? (
               <>
                 <img
-                  src="/images/santa.png"
+                  src="/gallery/one.avif"
                   alt="Santa Claus"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -142,7 +142,7 @@ export default function SantaPage() {
         <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4">
           <div className="text-gray-700 text-lg leading-relaxed text-left">
             <p className="font-semibold text-black">
-              🎅 Santa will roast your friend!
+              Santa will roast your friend!
             </p>
             <p>Enter your friend's first name and surname.</p>
           </div>

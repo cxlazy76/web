@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function AlienPage() {
+export default function TribalPage() {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [loading, setLoading] = useState(false);
@@ -45,7 +45,7 @@ export default function AlienPage() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, surname, character: 'alien' }),
+        body: JSON.stringify({ name, surname, character: 'tribal' }),
       });
 
       const data = await res.json();
@@ -79,7 +79,7 @@ export default function AlienPage() {
 
       const link = document.createElement('a');
       link.href = blobUrl;
-      link.download = 'Alien_Message.mp4';
+      link.download = 'Tribal_Message.mp4';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -98,7 +98,7 @@ export default function AlienPage() {
       "
     >
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 text-center leading-tight">
-        Alien Prankster
+        Tribal Warrior
       </h1>
 
       <div
@@ -108,14 +108,14 @@ export default function AlienPage() {
           gap-10 p-6 md:p-10
         "
       >
-        {/* === Alien video === */}
+        {/* === Tribal video === */}
         <div className="flex justify-center flex-shrink-0 relative w-full md:w-auto">
           <div className="relative rounded-2xl overflow-hidden shadow-md w-full sm:w-60 md:w-64 aspect-[9/16] bg-gray-100 mx-auto">
             {!videoUrl ? (
               <>
                 <img
-                  src="/gallery/two.avif"
-                  alt="Alien character"
+                  src="/gallery/five.avif"
+                  alt="Tribal Warrior"
                   className="w-full h-full object-cover rounded-2xl"
                 />
                 {loading && (
@@ -141,7 +141,7 @@ export default function AlienPage() {
         {/* === Form Section === */}
         <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4">
           <div className="text-gray-700 text-lg leading-relaxed text-left">
-            <p className="font-semibold text-black">This Alien will rizz up your girl!</p>
+            <p className="font-semibold text-black">This Tribal Warrior will encourage you to get into the wild!</p>
             <p>Enter your friend's first name and surname below.</p>
           </div>
 
@@ -171,7 +171,7 @@ export default function AlienPage() {
             className="w-full bg-[#e5ff00] hover:bg-[#d9f000] text-black 
                        font-semibold text-lg px-6 py-3 rounded-lg transition-all disabled:opacity-60"
           >
-            {loading ? 'Generating...' : 'Generate My Alien Video'}
+            {loading ? 'Generating...' : 'Generate My Tribal Video'}
           </button>
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
