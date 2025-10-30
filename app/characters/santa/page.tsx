@@ -97,10 +97,6 @@ export default function SantaPage() {
         min-h-screen md:h-screen md:overflow-hidden px-6 py-10
       "
     >
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 text-center leading-tight">
-        Santa Claus
-      </h1>
-
       <div
         className="
           w-full max-w-5xl bg-white border border-gray-200 rounded-3xl shadow-lg
@@ -132,14 +128,19 @@ export default function SantaPage() {
                 controls
                 autoPlay
                 playsInline
-                className="w-full h-full rounded-2xl object-cover"
+                className="w-full h-full rounded-2xl object-contain bg-black"
               />
             )}
           </div>
         </div>
 
         {/* === Form Section === */}
-        <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4">
+        <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4 text-left">
+          {/* ✅ Moved Santa Claus title here */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-2">
+            Santa Claus
+          </h1>
+
           <div className="text-gray-700 text-lg leading-relaxed text-left">
             <p className="font-semibold text-black">
               Santa will roast your friend!

@@ -33,3 +33,30 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Make fullscreen videos fit the screen properly on desktop */
+video:-webkit-full-screen,
+video:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: contain !important; /* <— This is the key */
+  background-color: black !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  border-radius: 0 !important;
+}
+
+/* Make mobile fullscreen truly edge-to-edge */
+@media (max-width: 768px) {
+  video:-webkit-full-screen,
+  video:fullscreen {
+    object-fit: cover !important; /* fill screen on phones */
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
