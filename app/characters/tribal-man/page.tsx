@@ -130,7 +130,6 @@ export default function TribalPage() {
               <video
                 src={videoUrl}
                 controls
-                autoPlay
                 playsInline
                 className="w-full h-full rounded-2xl object-cover"
               />

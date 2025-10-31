@@ -126,7 +126,6 @@ export default function SantaPage() {
               <video
                 src={videoUrl}
                 controls
-                autoPlay
                 playsInline
                 className="w-full h-full rounded-2xl object-contain bg-black"
               />

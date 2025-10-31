@@ -52,11 +52,13 @@ video::-webkit-media-controls-enclosure {
 }
 
 /* Make mobile fullscreen truly edge-to-edge */
+/* Make fullscreen videos fit correctly on mobile */
 @media (max-width: 768px) {
   video:-webkit-full-screen,
   video:fullscreen {
-    object-fit: cover !important; /* fill screen on phones */
+    object-fit: contain !important; /* show whole video */
     width: 100vw !important;
     height: 100vh !important;
+    background-color: black !important;
   }
 }
