@@ -97,10 +97,6 @@ export default function TribalPage() {
         min-h-screen md:h-screen md:overflow-hidden px-6 py-10
       "
     >
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 text-center leading-tight">
-        Tribal Warrior
-      </h1>
-
       <div
         className="
           w-full max-w-5xl bg-white border border-gray-200 rounded-3xl shadow-lg
@@ -131,17 +127,23 @@ export default function TribalPage() {
                 src={videoUrl}
                 controls
                 playsInline
-                className="w-full h-full rounded-2xl object-cover"
+                className="w-full h-full rounded-2xl object-contain bg-black"
               />
             )}
           </div>
         </div>
 
         {/* === Form Section === */}
-        <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4">
+        <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-4 text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-2">
+            Tribal Warrior
+          </h1>
+
           <div className="text-gray-700 text-lg leading-relaxed text-left">
-            <p className="font-semibold text-black">This Tribal Warrior will encourage you to get into the wild!</p>
-            <p>Enter your friend's first name and surname below.</p>
+            <p className="font-semibold text-black">
+              This Tribal Warrior will make your friend laugh out loud!
+            </p>
+            <p>Enter your friend's first name and surname.</p>
           </div>
 
           <input
